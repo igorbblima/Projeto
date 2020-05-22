@@ -1,0 +1,42 @@
+#Pesquisa{
+    background-color:#E0EEEE;
+    border:solid 2px #f58f20;
+    border-radius:10px;
+    width:300px;
+    height:32px;
+    
+  }
+   
+  #campoPesquisa{
+    float:left;
+    background-color:transparent;
+    padding-left:5px; 
+    font-size:18px;
+    border:none;
+    height:32px;
+    width:191px;
+    
+  }
+   
+  #btnPesquisa{
+    border: 5px solid brown ;
+    float:left;
+    height:32px;
+    border-radius:0 7px 7px 0;
+    width:75px;
+    font-weight:normal;
+    background:#3d2217;
+  }
+   
+  #Pesquisa img{
+    float:left;
+
+    
+  }
+  .Posicao {
+
+  position: absolute; 
+  left: 530px;
+  top: 0px;
+    
+    }

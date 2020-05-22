@@ -1,0 +1,56 @@
+.body-general {
+    background-color: #3d2217;
+    font-family: sans-serif;
+}
+
+.form-login {
+    margin-top: 0px;
+    width: 30%;
+    padding: 40px;
+    position: absolute;
+    top: 12%;
+    left: 33%;
+    background-color: #eee;
+    text-align: center;
+    border-radius: 3px;
+}
+
+.img-logo {
+    width: 200px;
+    height: 200px;
+    padding: 0%;
+    margin-top: -20px;
+}
+
+.text-login {
+    margin-top: -10px;
+    color: #3d2217;
+    font-weight: 300;
+    font-size: 24px;
+    font-family: 'Oswald';
+}
+
+.email {
+    margin-top: 20px;
+    width: 70%;
+}
+
+.senha {
+    margin-top: 20px;
+    width: 70%;
+}
+
+.login {
+    margin: 20px 0px 10px 0px;
+    padding: 10px 15% !important;
+}
+
+.cadastrar {
+    background-color: transparent;
+    color: #3d2217;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: transparent;
+}

@@ -1,0 +1,57 @@
+/*
+    Cores base:
+        #f58f20 - Laranja
+        #3d2217 - Marrom
+        #ffffff - Branco
+        #000000 - Preto
+*/
+
+.input {
+    border-radius: 5px;
+    height: 38px;
+    padding-left: 10px;
+    padding-right: -10px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    font-size: 16px;
+}
+
+textarea:focus,
+input:focus,
+select:focus {
+    box-shadow: 0 0 0 0;
+    border: 1px solid #ccc;
+    outline: 0;
+}
+
+.button {
+    background-color: #3d2217;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.link {
+    text-decoration: transparent;
+}
+
+.button-second {
+    text-decoration: none;
+    background-color: #fff;
+    color: #3d2217;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.label {
+    color: white;
+    font-family: 'Oswald' sans-serif;
+    padding: 1px;
+}
+

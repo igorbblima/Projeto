@@ -1,0 +1,31 @@
+.banner{
+    /*    position: absolute; */ 
+	/* left: 200px;*/ /* posiciona a 90px para a esquerda */ 
+	/* top: 50px; /* /* posiciona a 70px para baixo */
+   
+    width: 900px;
+    height: 300px;
+    margin: 0 auto;
+    animation: slide 10s infinite;
+    animation-direction: alternate;
+
+}
+
+
+@keyframes slide{
+
+    0%,  30% {
+        background-image: url(../img/produto1.jpeg);
+
+    }
+
+    35%,  65% {
+        background-image: url(../img/produto2.jpg);
+    }
+
+    70%,  100% {
+        background-image: url(../img/produto3.jpg);
+
+    }   
+
+}

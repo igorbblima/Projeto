@@ -1,0 +1,76 @@
+.body-general {
+    background-color: #ccc;
+    font-family: sans-serif;
+}
+
+.form-cadastro {
+    text-align: center;
+    margin-top: 0px;
+    width: 60%;
+    padding: 20px 40px;
+    position: absolute;
+    left: 28%;
+    background-color: #3d2217;
+    border-radius: 5px;
+}
+
+.divs-form-direita {
+    text-align: left;
+    width: 45%;
+    display: inline-block;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.divs-form-esquerda {
+    text-align: left;
+    width: 45%;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.img-logo {
+    width: 250px;
+    height: 250px;
+    padding: 0%;
+    margin-top: -20px;
+    margin-left: 20px;
+    position: absolute;
+}
+
+.text-initial {
+    margin-top: 10px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 40px;
+    font-family: 'Oswald';
+}
+
+.input {
+    margin-top: 10px;
+    width: 100%;
+    background-color: #eee !important;
+}
+
+.div-img {
+    top: 50%;
+    margin-top: 3%;
+}
+
+.button-second {
+    margin-top: 20px;
+    padding: 10px 10% !important;
+    font-weight: bold;
+    border: 1px solid white !important;
+}
+
+.voltar-link {
+    text-align: right !important;
+}
+
+.link {
+    background-color: transparent !important;
+    color: white !important;
+    font-weight: normal !important;
+    margin-right: 8px;
+}

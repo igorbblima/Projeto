@@ -1,0 +1,33 @@
+.logo{
+    
+    position: auto;
+    max-width:200px;
+    max-height:150px;
+    width: auto;
+    height: auto;
+     
+	left: 10px;   /* posiciona a 90px para a esquerda */ 
+    top: 10px;    /* posiciona a 70px para baixo */
+
+}
+
+.logoMenuPrincipal{
+
+    position: absolute;
+    max-width:200px;
+    max-height:150px;
+    width: auto;
+    height: auto;
+     
+	left: 10px;   /* posiciona a 90px para a esquerda */ 
+    top: 10px;    /* posiciona a 70px para baixo */
+
+}
+
+label{
+    
+    position: absolute;
+	left: 1200px;
+    top: 100px;
+    
+}
