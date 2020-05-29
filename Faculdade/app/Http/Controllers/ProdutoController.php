@@ -15,10 +15,8 @@ class ProdutoController extends Controller
      */
     public function index()
     {
-
-         $produtos =Produto::all();
-         $produtoUm =Produto::find(1);
-        return view ('menuPrincipal',compact('produtoUm','produtos'));
+        $produtos =Produto::all();
+        return view('menuPrincipal',compact('produtos'));
     }
          //
 
@@ -41,6 +39,14 @@ class ProdutoController extends Controller
      */
     public function store(Request $request)
     {
+        // validaçoes
+        $validar = $request->validate([
+            'nome_do_produto'=>'required |max:20 |min:2',
+            'imagem'=>'required',
+            'quantidade'=>'required' ,
+            'preco'=>'required'
+        ]);
+
         $fotoProduto=$request->file('imagem')->getClientOriginalName();
         $produto = new Produto();
         $produto-> nome_do_produto = $request -> input('nome_do_produto');
@@ -49,6 +55,8 @@ class ProdutoController extends Controller
         $produto-> preco = $request -> input('preco');
        // dd($produto); DEPURAR CODIGO
         $produto->save();
+            //redirecionamento de pagina
+        return redirect('produto')->with('success','Cadastro do produto realizado');
     }
 
     /**
@@ -59,7 +67,10 @@ class ProdutoController extends Controller
      */
     public function show($id)
     {
-        //
+        // $produtosUm =Produto::find($id);
+        // view('listagemProdutos',compact('produtosUm'));
+
+
     }
 
     /**

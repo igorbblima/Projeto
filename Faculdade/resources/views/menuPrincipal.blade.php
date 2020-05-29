@@ -41,6 +41,14 @@
     </div>
 </form>
 <body>
+    <!-- alerta sucesso -->
+    @if(session('success'))
+    <div class="container">
+        <div class="alert alert-primary" role="alert">
+            <strong>Cadastro do produto realizado!</strong>
+        </div>
+    </div>
+    @endif
 
     <div class="banner"> </div>
 
@@ -48,13 +56,13 @@
         <ul>
             <li><a href="menuPrincipal">Home</a>
                 <ul>
-                    <li><a href="AtualizarCadastro">Atualizar Cadastro</a></li>
+                    <li><a href="AtualizarCadastro">Atualizar Dados</a></li>
                     <li><a href="cadastroProduto">Cadastrar Produto</a></li>
                 </ul>
             </li>
             <li><a href="#">Serviços</a>
                 <ul>
-                    <li><a href="#">Listar Produtos</a></li>
+                    <li><a href="#">Listar produtoUm</a></li>
                     <li><a href="https://www.receiteria.com.br/receitas-faceis/" target="_blank">Receitas</a></li>
                     <li><a href="faleConosco">Fale Conosco</a></li>
                 </ul>
@@ -65,32 +73,22 @@
 
     <img src="/img/logomarca.png" class="logoMenuPrincipal">
 
-    <hr>
-        <!-- CADASTRA O PRODUTO E DALE -->
-    <ul>
+    <!-- usando card -->
     @foreach($produtos as $todosProdutos)
-    <li>Nome do Produto: {{$todosProdutos->nome_do_produto}}</li>
-    <li>Preço: R${{$todosProdutos->preco}},00</li>
-    <li><img src="storage/{{$todosProdutos->imagem}}" alt="imagem"></img></li>
-    <li>Quantidade:{{$todosProdutos->imagem}} unidades</li>
+    <div class="card" style="width: 18rem;">
+        <h4 style="text-align:center">{{$todosProdutos->nome_do_produto}}</h4>
+        <img class="card-img-top" src="storage/{{$todosProdutos->imagem}}" alt="Ilustracao">
+        <div class="card-body">
+            <form action="route('produto.show,$todosProdutos->id')">
+            <button class="btn btn-primary" data-toggle="modal"
+            data-target="#detalhesProduto" type="button">Detalhes</button>
+            </form>
+        </div>
+    </div>
     @endforeach
-    </ul>
-
-    <!------------>
-
-
-    <!------------->
-
-
-
-
-
-
-
-    <!--------------------------------------------------------------------------------------------------->
-
-
+<hr>
+<!-- modal         detalhesProduto  -->
+@include('detalhesProduto')
 
 </body>
-
 </html>
