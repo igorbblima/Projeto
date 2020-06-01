@@ -1,5 +1,6 @@
  <!-- Modal -->
- <div class="modal fade" id="detalhesProduto" tabindex="-1" role="dialog" aria-labelledby="detalhesModal" aria-hidden="true">
+ @foreach($produtos as $todosProdutos)
+<div class="modal fade" id="detalhesProduto-{{$todosProdutos->id}}" tabindex="-1" role="dialog" aria-labelledby="detalhesModal" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -10,9 +11,9 @@
         </div>
         <div class="modal-body">
             <ul>
-             {{-- <li>Nome do Produto:{{$produtosUm->nome_do_produto}}</li> --}}
-             {{-- <li>Preço: R${{$produto->preco}},00</li> --}}
-            {{-- <li>Quantidade:{{$produto->quantidade}} unidades</li>  --}}
+             <li>Nome do Produto:{{$todosProdutos->nome_do_produto}}</li>
+             <li>Preço: R${{$todosProdutos->preco}},00</li>
+            <li>Quantidade:{{$todosProdutos->quantidade}} unidades</li>
         </ul>
         </div>
 
@@ -22,3 +23,4 @@
       </div>
     </div>
   </div>
+  @endforeach

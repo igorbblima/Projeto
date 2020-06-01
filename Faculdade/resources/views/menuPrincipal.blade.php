@@ -23,6 +23,7 @@
 
 </head>
 
+<body>
     <div class="Logout">
         <button type="button" name="logout" value="Fazer Logout">Logout</button>
     </div>
@@ -40,7 +41,7 @@
         </div>
     </div>
 </form>
-<body>
+
     <!-- alerta sucesso -->
     @if(session('success'))
     <div class="container">
@@ -54,20 +55,17 @@
 
     <nav class="menu">
         <ul>
-            <li><a href="menuPrincipal">Home</a>
-                <ul>
-                    <li><a href="AtualizarCadastro">Atualizar Dados</a></li>
-                    <li><a href="cadastroProduto">Cadastrar Produto</a></li>
-                </ul>
+            <li>
+                <a href="menuPrincipal">Home</a>
             </li>
-            <li><a href="#">Serviços</a>
-                <ul>
-                    <li><a href="#">Listar produtoUm</a></li>
-                    <li><a href="https://www.receiteria.com.br/receitas-faceis/" target="_blank">Receitas</a></li>
-                    <li><a href="faleConosco">Fale Conosco</a></li>
-                </ul>
+            <li>
+                <a href="#">Serviços</a>
             </li>
             <li><a href="https://www.youtube.com/?hl=pt&gl=BR" target="_blank"> Youtube </a></li>
+            <li><a href="AtualizarCadastro">Atualizar Dados</a></li>
+                    <li><a href="produto/create">CadastroProduto</a></li>
+                    <li><a href="https://www.receiteria.com.br/receitas-faceis/" target="_blank">Receitas</a></li>
+                    <li><a href="faleConosco">Fale Conosco</a></li>
         </ul>
     </nav>
 
@@ -79,9 +77,9 @@
         <h4 style="text-align:center">{{$todosProdutos->nome_do_produto}}</h4>
         <img class="card-img-top" src="storage/{{$todosProdutos->imagem}}" alt="Ilustracao">
         <div class="card-body">
-            <form action="route('produto.show,$todosProdutos->id')">
+            <form action="{{route('produto.show',$todosProdutos->id)}}">
             <button class="btn btn-primary" data-toggle="modal"
-            data-target="#detalhesProduto" type="button">Detalhes</button>
+            data-target="#detalhesProduto-{{$todosProdutos->id}}" type="button">Detalhes</button>
             </form>
         </div>
     </div>

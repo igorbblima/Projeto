@@ -67,8 +67,7 @@ class ProdutoController extends Controller
      */
     public function show($id)
     {
-        // $produtosUm =Produto::find($id);
-        // view('listagemProdutos',compact('produtosUm'));
+
 
 
     }
